@@ -1,5 +1,8 @@
 """Registration code of Gym environments in this package."""
-import gymnasium as gym
+
+
+
+import gymnasium
 
 
 def _register_mario_env(id, is_random=False, **kwargs):
@@ -23,7 +26,7 @@ def _register_mario_env(id, is_random=False, **kwargs):
         # set the entry point to the standard Super Mario Bros. environment
         entry_point = 'gym_super_mario_bros:SuperMarioBrosEnv'
     # register the environment
-    gym.envs.registration.register(
+    gymnasium.envs.registration.register(
         id=id,
         entry_point=entry_point,
         max_episode_steps=9999999,
@@ -66,7 +69,7 @@ def _register_mario_stage_env(id, **kwargs):
 
     """
     # register the environment
-    gym.envs.registration.register(
+    gymnasium.envs.registration.register(
         id=id,
         entry_point='gym_super_mario_bros:SuperMarioBrosEnv',
         max_episode_steps=9999999,
@@ -99,7 +102,7 @@ for version, rom_mode in enumerate(_ROM_MODES):
 
 
 # create an alias to gym.make for ease of access
-make = gym.make
+make = gymnasium.make
 
 
 # define the outward facing API of this module (none, gym provides the API)

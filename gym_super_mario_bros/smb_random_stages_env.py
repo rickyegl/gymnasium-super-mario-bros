@@ -1,10 +1,10 @@
 """An OpenAI Gym Super Mario Bros. environment that randomly selects levels."""
-import gymnasium as gym
+import gymnasium
 import numpy as np
 from .smb_env import SuperMarioBrosEnv
 
 
-class SuperMarioBrosRandomStagesEnv(gym.Env):
+class SuperMarioBrosRandomStagesEnv(gymnasium.Env):
     """A Super Mario Bros. environment that randomly selects levels."""
 
     # relevant meta-data about the environment
