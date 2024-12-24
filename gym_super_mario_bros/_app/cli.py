@@ -58,7 +58,11 @@ def main():
         print('--stages,-S should only be specified for RandomStages environments')
         sys.exit(1)
     # build the environment with the given ID
-    env = gym.make("SuperMarioBros-v0")#args.env), stages=args.stages)
+    if args.env != None:
+        env = gym.make(args.env, stages=args.stages)
+    else:
+        env = gym.make('SuperMarioBros-v0')
+    
     # wrap the environment with an action space if specified
     if args.actionspace != 'nes':
         print(args.actionspace)
