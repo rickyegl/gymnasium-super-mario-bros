@@ -31,6 +31,7 @@ def _register_mario_env(id, is_random=False, **kwargs):
         kwargs=kwargs,
         nondeterministic=True,
     )
+    print(f"Registered env: {id}")
 
 
 # Super Mario Bros.
