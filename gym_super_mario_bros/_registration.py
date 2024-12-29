@@ -26,7 +26,7 @@ def _register_mario_env(id, is_random=False, **kwargs):
         # set the entry point to the standard Super Mario Bros. environment
         entry_point = 'gym_super_mario_bros:SuperMarioBrosEnv'
     # register the environment
-    gymnasium.envs.registration.register(
+    gymnasium.register(
         id=id,
         entry_point=entry_point,
         max_episode_steps=9999999,
@@ -69,7 +69,7 @@ def _register_mario_stage_env(id, **kwargs):
 
     """
     # register the environment
-    gymnasium.envs.registration.register(
+    gymnasium.register(
         id=id,
         entry_point='gym_super_mario_bros:SuperMarioBrosEnv',
         max_episode_steps=9999999,
