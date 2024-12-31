@@ -31,7 +31,7 @@ class SuperMarioBrosEnv(NESEnv):
     # the legal range of rewards for each step
     reward_range = (-15, 15)
 
-    def __init__(self, rom_mode='vanilla', lost_levels=False, target=None, render_mode=None):
+    def __init__(self, rom_mode='vanilla', lost_levels=False, target=None, render_mode=None, frameskip=4, repeat_action_probability=0.25):
         """
         Initialize a new Super Mario Bros environment.
 
