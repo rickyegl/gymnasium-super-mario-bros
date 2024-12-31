@@ -43,6 +43,7 @@ def _get_args():
     )
     parser.add_argument('--stages', '-S',
         type=str,
+        default="1-1 1-2 1-3 1-4",
         nargs='+',
         help='The random stages to sample from for a random stage env'
     )
